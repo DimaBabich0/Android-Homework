@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/avatar_circle"
+        android:clipToOutline="true"
+        android:src="@drawable/ic_launcher_background"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/avatar"
+        android:layout_marginStart="12dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="Chat name"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textSize="12sp"
+        android:textColor="#777"
+    />
+
+    <TextView
+        android:id="@+id/last_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_toEndOf="@id/avatar"
+        android:layout_marginStart="12dp"
+        android:textColor="#888"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="Last message text" />
+
+    <ImageView
+        android:id="@+id/checkmark"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignBottom="@id/last_message"
+        android:layout_toEndOf="@id/last_message"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_single_check" />
+
+    <TextView
+        android:id="@+id/unread"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/time"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:background="@drawable/unread_bg"
+        android:text="0"
+        android:visibility="gone"
+        android:textSize="12sp"/>
+
+</RelativeLayout>
